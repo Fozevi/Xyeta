@@ -409,7 +409,7 @@ create_database() {
     mysql -u root -p -e "CREATE DATABASE ${MYSQL_DB};"
 
     echo "* Granting privileges.."
-    mysql -u root -e -p "GRANT ALL PRIVILEGES ON ${MYSQL_DB}.* TO '${MYSQL_USER}'@'127.0.0.1' WITH GRANT OPTION;"
+    mysql -u root -p -e "GRANT ALL PRIVILEGES ON ${MYSQL_DB}.* TO '${MYSQL_USER}'@'127.0.0.1' WITH GRANT OPTION;"
 
     echo "* Flushing privileges.."
     mysql -u root -p -e "FLUSH PRIVILEGES;"
